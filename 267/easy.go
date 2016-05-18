@@ -4,7 +4,7 @@ import (
     "fmt"
 )
 
-func prefix(n int) string {
+func suffix(n int) string {
     switch {
     case n == 11:
         return "th"
@@ -31,12 +31,12 @@ func main() {
         fmt.Println("not a number")
     }
 
-    for i := 1; i < 151; i++ {
+    for i := 1; i < 101; i++ {
         if i == place {
             continue
         }
-        prefix := prefix(i)
-        fmt.Printf("%d%s, ", i, prefix)
+        suffix := suffix(i)
+        fmt.Printf("%d%s, ", i, suffix)
     }
 
 }
